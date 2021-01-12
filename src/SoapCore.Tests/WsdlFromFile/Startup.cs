@@ -39,12 +39,13 @@ namespace SoapCore.Tests.WsdlFromFile
 					{
 						"Service.asmx", new WebServiceWSDLMapping
 						{
-							SchemaFolder = "\\..\\..\\..\\WsdlFromFile\\WSDL",
-							WsdlFile = "snapshotpull.wsdl",
-							WSDLFolder = "\\..\\..\\..\\WsdlFromFile\\WSDL"
+							SchemaFolder = "/WsdlFromFile/WSDL",
+							WsdlFile = "SnapshotPull.wsdl",
+							WSDLFolder = "/WsdlFromFile/WSDL"
 						}
 					}
-				}
+				},
+				AppPath = env.ContentRootPath
 			};
 
 			app.UseSoapEndpoint(_serviceType, "/Service.svc", new BasicHttpBinding(), SoapSerializer.DataContractSerializer);
@@ -65,12 +66,13 @@ namespace SoapCore.Tests.WsdlFromFile
 					{
 						"Service.asmx", new WebServiceWSDLMapping
 						{
-							SchemaFolder = "\\..\\..\\..\\WsdlFromFile\\WSDL",
-							WsdlFile = "snapshotpull.wsdl",
-							WSDLFolder = "\\..\\..\\..\\WsdlFromFile\\WSDL"
+							SchemaFolder = "/WsdlFromFile/WSDL",
+							WsdlFile = "SnapshotPull.wsdl",
+							WSDLFolder = "/WsdlFromFile/WSDL"
 						}
 					}
-				}
+				},
+				AppPath = env.ContentRootPath
 			};
 
 			app.UseRouting();
